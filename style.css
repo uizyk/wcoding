@@ -1,0 +1,684 @@
+
+/* If a span has class "error", but NOT "display", give it display:none; */
+/* If a span has class "error", and "display", give it display:block; */
+/* 
+span.display {
+    display:block;
+} */
+
+
+
+.error{
+    display: none;
+}
+
+.error.display{
+    display: block;
+    
+}   
+
+.required.red{
+    color: red;
+    vertical-align: middle;
+}
+
+input.red{
+    border: 1px solid red;
+    color: red;
+}
+
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    background-color: black;
+
+}
+
+main{
+    width: 996px;
+    margin: auto;
+}
+
+
+header{
+    background-color: black;
+    height: 60px;
+    padding-top: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+   z-index: 999;
+    
+}
+
+#logo{
+    height:29.828px;
+    width:157px;
+    margin-top: 5px;
+}
+
+#header-text{
+    background-color: RGB(240, 241, 241);
+    text-align: center;
+    height: 119.273px;
+    margin-bottom: 16px;
+    margin-top: 80px;
+}
+
+/* #header-text{
+    margin-bottom: 150px;
+} */
+
+div h2{
+    padding: 10px 0px;
+}
+
+section{
+    background-color: RGB(249, 249, 249);
+    padding: 12px 20px; 
+    padding-top: 30px;
+}
+
+
+
+section p:nth-child(3){
+    margin-bottom: 20px;
+}
+
+.sign-up-info{
+    font-size: 12px;
+    color:RGB(119, 119, 118);
+}
+
+.sign-up-info a{
+    text-decoration: none;
+    color: RGB(186, 158, 124);
+}
+
+#fieldset-one{
+    width: 972px;
+    height: 360px;
+    border: 0;
+    margin-bottom: -30px;
+    position: relative;
+}
+
+label{
+    font-size: 12px;
+}
+
+
+.basic-info-line{
+
+    height: 47px;
+    margin-bottom: 20px;
+    
+}
+
+.basic-info-label{
+    display: inline-block;
+    width: 161.45px;
+    height: 47px;
+    font-size: 12px;
+    }
+
+.basic-info-input{
+    width: 209.906px;
+    height: 47px;
+    padding: 0px 10px;
+    border: 0.3px solid RGB(212, 212, 213);
+    border-radius: 2px;
+}
+
+
+.basic-info-line span{
+    
+    font-size: 12px;
+    color: red;
+
+    
+}
+
+.basic-info-line div{
+    display: inline-block;
+}
+
+
+#fieldset-two{
+    height: 18px;
+    padding: 30px;
+    margin: 0px -20px;
+    border: 0;
+    background-color: RGB(204, 205, 204);
+
+}
+
+#fieldset-two h2{
+    font-size: 16px;
+    margin: 0px -10px;
+}
+
+
+#fieldset-three{
+
+    /* height without popup  */
+    /* height:56px;  */
+ 
+    height: 222px;
+    padding: 20px 0px;
+    border: 0;
+}
+
+#radio-one, #radio-two{
+    height: 18px;
+}
+
+#radio-one{
+    margin-bottom: 10px;
+}
+
+
+#privacy-notice{
+    height: 59.188px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(226,226,226);
+    margin: 0px -20px;
+
+}
+
+#privacy-notice p{
+    font-size: 12px;
+    color: RGB(111, 111, 111);
+}
+
+#privacy-notice p a{
+    font-size: 12px;
+    color: rgb(177,146,107);
+}
+
+button{
+    width: 200px;
+    height:41.19px;
+    background-color:RGB(62, 135, 4);
+    color:white;
+    margin-top: 18px;
+    border: 0;
+
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#button-span{
+    width: 122px;
+    height: 16.797px;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+.fa-solid{
+    margin-right: -30px;
+    margin-left: 30px
+}
+
+footer{
+    height: 104.69px;
+
+}
+
+
+.sns-icons{
+    height: 19.5px;
+    width: 15px;
+    padding: 0px 10px;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    height:68px;
+    background-color: RGB(27, 26, 26);
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+
+ol{
+    list-style: none;
+    display: inline-flex;
+    margin-top: 7px;
+}
+
+#ol-top li a{
+    padding: 5px;
+    font-size: 12px;
+    margin-bottom: 2px;
+    color:RGB(204, 204, 205);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#ol-bottom li a{
+    padding: 5px;
+    font-size: 12px;
+    margin-bottom: 2px;
+    color:RGB(132, 133, 133);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.li-line{
+    border-right: 1px solid RGB(204, 204, 205);
+}
+
+.li-line-two{
+    border-right: 1px solid RGB(132, 133, 133);
+}
+
+#ol-top{
+    margin-left: 125px;
+    margin-bottom: 5px;
+}
+
+#ol-bottom{
+    margin-right:10px;
+}
+/* 
+#lang-select{
+    width:50.617px;
+    height:16.788px;
+    padding:11.2px 42px 11.2px 14px;
+    
+} */
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.bottom-middle, .bottom-left p{
+    color: white;
+    height: 19.5px;
+    padding: 10px 20px;
+}
+
+.bottom-middle, .bottom-right, #bottom-logo{
+    font-size: 12px;
+    height: 10.45px;
+}
+
+.bottom-right{
+    color: RGB(131, 130, 131);
+    height: 19.5px;
+    padding: 10px 20px;
+}
+
+
+/* hidden password section */
+
+#password-popup{
+    background-color: black;
+    height: 185px;
+    width:133px;
+    position: absolute;
+    left: 420px;
+    top: 197px;
+    border-radius: 3px;
+    visibility: hidden;
+
+}
+
+#password-popup #password-must{
+    color: RGB(164, 167, 172);
+    font-size: 12px;
+    list-style: none;
+    margin-left: 7px;
+}
+
+#password-popup ul{
+    margin-top: -11px;
+}
+
+
+#password-popup ul li{
+    color: white;
+    font-size: 12px;
+    margin-left: 22px;
+    margin-bottom: 17px;
+  
+}
+
+.fa-caret-left{
+   margin-left: -5px;
+   margin-top: 5px;
+}
+
+#password-popup:hover{
+    cursor:pointer;
+}
+
+.password:focus ~ #password-popup{
+    visibility: visible;
+}
+
+/* membership popup section */
+
+
+.membership-popup{
+    width: 931px;
+    height: 146px;
+    margin-left:25px;
+    padding-top:30px;
+    transition: all 1s ease-out;
+    position: relative;
+}
+
+
+.membership-line{
+    width: 100%;
+    height: 65px;
+    margin-bottom: 20px;
+}
+
+.membership-label{
+    display: inline-block;
+    width: 161.45px;
+    height: 47px;
+    font-size: 12px;
+}
+
+.membership-input{
+    width: 423.359px;
+    height: 25px;
+    padding: 10px 6px;
+    margin-left: 110px;
+    border: 0.3px solid RGB(212, 212, 213);
+    border-radius: 2px;
+}
+
+.find-membership-number{
+    font-size: 12px;
+    color: RGB(162, 124, 75);
+    margin-top: -15px;
+    margin-left: 138px;
+    text-decoration:none;
+    
+}
+
+.hover-underline{
+    text-decoration: none;
+}
+
+.hover-underline:hover{
+    text-decoration: underline;
+}
+
+/* POSTAL CODE POPUP*/
+
+#postal-popup{
+    background-color: black;
+    font-size: 12px;;
+    width: 130px;
+    height: 55px;
+    position: absolute;
+    left: 735px;
+    top:110px;
+    border-radius: 3px;
+    visibility: hidden;
+}
+#postal-popup p{
+    margin-top: -10px;
+    margin-left: 10px;
+    color: RGB(230, 230, 230);
+    font-weight: 100;
+}
+
+
+#postal-popup .fa-caret-left{
+    margin-left: -4px;
+    margin-top: 6px;
+ }
+
+ #postal-code:focus ~ #postal-popup{
+    visibility: visible;
+ }
+
+
+
+/* MEMBERSHIP TRANSITION */
+
+
+
+/* .membership-pop{
+    max-height: 0;
+    overflow-y:hidden;
+    transition: max-height 1s ease-in-out
+}
+
+.yes:checked ~ .membership-popup{
+    max-height: 200px;
+} */
+
+
+/* MQ */
+
+@media screen and (max-width: 995px){
+
+    main{
+        width: 100vw;
+        margin: auto;
+    }
+    
+
+
+    .basic-info-input{
+        width: 50vw;
+        margin-left: 100px;
+    }
+
+    header{
+        background-color: RGB(23, 23, 23);
+    }
+
+    #logo{
+        height: 20px;
+        width: 105px;
+    }
+
+    .membership-input{
+        width: 40vw;
+        height: 25px;
+        padding: 10px 6px;
+        margin-left: 110px;
+        border: 0.3px solid RGB(212, 212, 213);
+        border-radius: 2px;
+    }
+
+    .find-membership-number{
+        font-size: 12px;
+        color: RGB(162, 124, 75);
+        margin-top: -15px;
+        margin-left: 138px;
+        text-decoration:none;
+        
+    }
+
+    .footer-top{
+        display: flex;
+        flex-direction: column;
+        justify-content:end;
+        
+        height:130px;
+        background-color: RGB(27, 26, 26);
+        width: 80vw;
+        margin-left: 80px;
+        align-items:flex-end;
+        margin-top: 20px;
+    }
+
+    
+    footer{
+        height: 204.69px;
+        
+        position: relative;
+    
+    }
+
+
+    .footer-left-top{
+        position: absolute;
+        top: 5px;
+        left: 80px;
+       
+    }
+}
+
+
+@media screen and (max-width: 767px){
+
+    .basic-info-input{
+        width: 90vw;
+        margin-left: -5px;
+        position: relative; 
+       
+    }
+
+    .basic-info-label{
+        /* display: none; */
+        position: absolute;
+        left: 5px;
+        z-index: 999;
+        width: 90px;
+        height: 5px;    
+        color: rgba(0, 0, 0, .5);   
+    }
+
+    .basic-info-line:focus-within .basic-info-label{
+        font-size: 8px;
+    
+    }
+
+    .membership-line{
+        position: relative;
+        display: inline-block;
+    }
+    .membership-line:focus-within .membership-label{
+        font-size: 8px;
+    }
+
+    .membership-label{
+       position: absolute;
+        left: -20px;
+       z-index: 999; 
+       width: 150px;
+       height: 5px;
+       color: rgba(0, 0, 0, .5);
+
+
+    }
+    
+    .membership-input{
+        width: 90vw;
+        margin-left: -30px;
+        position: relative;
+      
+    }
+  
+    .find-membership-number{
+        margin-left: -15px;
+        text-decoration:none;
+        margin-top: 5px;
+        
+    }
+
+
+
+    button{
+        width: 92vw;
+        
+     
+    }
+    
+    
+    #button-span{
+        width: 122px;
+        height: 16.797px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+
+
+    #privacy-notice{
+        height: 110px;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-top: 1px solid rgb(226,226,226);
+        margin: 0px -20px;
+
+    }
+
+
+
+/* footer */
+
+
+    .footer-top{
+        height:auto;
+        width: 80vw;
+        margin-left: 80px;
+        margin-top: 20px;
+    }
+
+    
+    footer{
+        height: 604.69px;
+        position: relative;
+    
+    }
+
+
+    .footer-left-top{
+        position: absolute;
+        top: 5px;
+        left: 80px;
+        z-index: -20px;
+       
+}
+
+    ol{
+        display: flex;
+        flex-direction: column;
+        margin-left: -300px;
+        
+
+    }
+
+    ol-top{
+        /* margin-right:300px; */
+    margin-left: -300px;
+    }
+
+    .li-line{
+        border-right:none;
+    }
+    
+    .li-line-two{
+        border-right:none;
+    }
+
+}
