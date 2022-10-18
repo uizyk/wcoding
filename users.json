@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Amy",
+      "age": 19,
+      "country": "US",
+      "image": "amy.jpeg"
+    },
+    {
+      "id": 2,
+      "firstname": "Tom",
+      "age": 24,
+      "country": "UK",
+      "image": "tom.jpeg"
+    },
+    {
+      "id": 3,
+      "firstname": "Mark",
+      "age": 22,
+      "country": "KR",
+      "image": "mark.jpg"
+    }
+  ]
+}
