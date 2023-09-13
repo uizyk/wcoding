@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/1ae923e323.js" crossorigin="anonymous"></script>
+    <title>Nespresso</title>
+</head>
+<body>
+    <main>
+
+        <header>
+            <img id="logo" src="https://www.nespresso.com/ecom/medias/sys_master/public/10506387390494/logo-white.svg?impolicy=small&imwidth=110"/>
+        </header>
+        <div id="header-text">
+            <h2>Already a Nespresso customer ?</h2>
+            <p>Select "Yes" for the question "Have you ever bought Nespresso coffee ?"</p>
+            <p>Indicate your client number & postal code</p>
+            <p>Then you can continuously benefit from the rewards program.</p>
+        </div>
+        <section>
+            <p class="sign-up-info"><strong>Have you placed an online order before?</strong></p>
+            <p class="sign-up-info">Then you already have an account and you can log-in <a class="hover-underline" href="#">here</a>.</p>
+            <p class="sign-up-info">If not, you can activate your online account blow and place your first online order.</p>
+            <fieldset id="fieldset-one">
+                <form method="post" action="#">
+                    <div class="basic-info-line">
+                        <label for="first-name" class="basic-info-label required">First name *</label>
+                        <div>
+                            <input type="text" name="first-name" class="basic-info-input one"/> 
+                            <span class="error">All inputs with * are required</span>
+                        </div>
+                    </div>
+                    <div class="basic-info-line">
+                        <label for="last-name" class="basic-info-label required" >Last name *</label>
+                        <div>
+                            <input type="text" name="last-name" class="basic-info-input two"/> 
+                            <span class="error">All inputs with * are required</span>
+                        </div>
+                    </div>
+                    <div class="basic-info-line">
+                        <label for="email" class="basic-info-label required">Email address *</label>
+                        <div>
+                            <input type="text" name="email" class="basic-info-input three"/> 
+                            <span class="error">All inputs with * are required</span>
+                        </div>
+                    </div>
+                    
+                        <div class="basic-info-line">
+                            <label for="pwd" class="basic-info-label required">Password *</label>
+                            
+                                <input type="password" name="pwd" class="basic-info-input password four"/> 
+                                <span class="error">All inputs with * are required</span>
+                            
+                            
+                        
+                        <!-- Password popup -->
+                            <div id="password-popup">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <ul>
+                                    <li id="password-must"> Password must:</li>
+                                    <li>Have at least 8 <br/> characters</li>
+                                    <li>Contain a <br/> number</li>
+                                    <li>Contain a <br/> capital letter</li>
+                                </ul>
+                            </div>
+                        </div>
+                <!-- </form> -->
+            </fieldset>
+            <fieldset id="fieldset-two">
+                    <h2>
+                        NESPRESSO CLUB MEMBERSHIP
+                    </h2>
+            </fieldset>
+            <fieldset id="fieldset-three">
+                <div>
+                    <div id="radio-one no">
+                        <input type="radio" name="membership" id="no"/>
+                        <label for="no">No, I do not have a Nespresso Club Membership number.</label>
+                    </div>
+                    <div id="radio-two yes">
+                        <input type="radio" name="membership" id="yes" checked/>
+                        <label for="yes">Yes, I do have a Nespresso Club Membership Number.</label>
+                    </div>
+
+                               
+                                    <!-- <input type="radio" name="membership" id="no"/>
+                                    <label for="no">No, I do not have a Nespresso Club Membership number.</label>
+                            
+                                
+                                    <input type="radio" name="membership" id="yes" checked/>
+                                    <label for="yes">Yes, I do have a Nespresso Club Membership Number.</label>
+                             -->
+
+                        
+                    <div class="membership-popup">
+                        <div class="membership-line">
+                            <label for="membership-number" class="membership-label">Membership number*</label>
+                            <input type="text" name="membership-number" id="membership-number" class="membership-input required"/>
+                            <p class="hover-underline find-membership-number"><a href="" class="find-membership-number">Where can you find your membership number?</a></p>
+                             <!-- <span class="error display">All inputs with * are required</span> -->
+                        </div>
+                        
+                        <div class="membership-line">
+                            <label for="postal-code"  class="membership-label">Postal code*</label>
+                            <input type="text" name="postal-code" id="postal-code" class="membership-input" required red/>
+                             <!-- <span class="error display">All inputs with * are required</span> -->
+                            <div id="postal-popup">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <p>Please enter a valid <br/>Postal Code</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+            <div id="privacy-notice">
+                <p>
+                    By clicking on “Continue”, you acknowledge having read <em>Nespresso</em> <a class="hover-underline" href="#">Privacy Notice</a>.
+                </p>
+                <!-- <a href=""> -->
+                    <button>
+                    <span id="button-span">CONTINUE</span> <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                <!-- </a> -->
+            </div>
+        </section>
+        <footer>
+
+            <div class="footer-top">
+                <div class="footer-left-top">
+                    
+                        <input type="image" src="https://www.nespresso.com/_ui/img/flags/fr.png?impolicy=small&imwidth=48"/>
+                        <select id="lang-select">
+                            <option>English</option>
+                            <option>Francais</option>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="footer-right-top">
+                    <p>
+                        <ol id="ol-top">
+                            <li class="li-line"><a href="">contact</a></li>
+                            <li class="li-line"><a href="">store locator</a></li>
+                            <li class="li-line"><a href="">events</a></li>
+                            <li class="li-line"><a href="">careers</a></li>
+                            <li class="li-line"><a href="">press room</a></li>
+                            <li><a href="">enterprise durable</a></li>
+                        </ol>
+                    </p>
+                    <p >
+                        <ol id="ol-bottom">
+                            <li class="li-line-two"><a href="">legal</a></li>
+                            <li class="li-line-two"><a href="">code of antitrust</a></li>
+                            <li class="li-line-two"><a href="">technical communication</a></li>
+                            <li class="li-line-two"><a href="">cancellation</a></li>
+                            <li class="li-line-two"><a href="">cookies</a></li>
+                            <li class="li-line-two"><a href="">glossary</a></li>
+                            <li><a href="">sitemap</a></li>
+                        </ol>
+                    </p>
+                </div>
+            
+            </div>
+
+            <div class="footer-bottom">
+                <div class="bottom-left">
+                    <p>
+                        Follow <em>Nespresso</em> on
+                        <a href=""><img class="sns-icons" id="facebook" title="facebook" alt="facebook-logo" src="https://www.nespresso.com/ecom/medias/sys_master/public/10506387456030/facebook.svg?impolicy=small&imwidth=60"/></a>
+                        <a href=""><img class="sns-icons" id="twitter" title="twitter" alt="twitter-logo" src="https://www.nespresso.com/ecom/medias/sys_master/public/10506387587102/twitter.svg?impolicy=small&imwidth=60"/></a>
+                        <a href=""><img class="sns-icons" id="instagram" title="instagram" alt="instagram-logo" src="https://www.nespresso.com/ecom/medias/sys_master/public/10694999506974/insta.svg?impolicy=small&imwidth=60"/></a>
+                        <a href=""><img class="sns-icons" id="linkedin" title="linkedin" alt="linkedin-logo" src="https://www.nespresso.com/ecom/medias/sys_master/public/12185046515742/linkedin.svg?impolicy=small&imwidth=60"/></a>
+                    </p>
+                </div>
+                <div class="bottom-middle">
+                    <p>
+                        <a>Top of page <img id="top-icon" title="top-icon" alt="" src=""/></a>
+
+                    </p>
+                </div>
+                <div class="bottom-right">
+                    <p>
+                        <a href=""><img id="bottom-logo" src="https://www.nespresso.com/ecom/medias/sys_master/public/10506387390494/logo-white.svg?impolicy=small&imwidth=110"/></a>
+                        <em>Nespresso</em> S.A 2017
+                    </p>
+                </div>
+            </div>
+
+
+        </footer>
+
+    </main>
+
+  <script src="errorSubmit.js"></script>
+
+</body>
+</html>
