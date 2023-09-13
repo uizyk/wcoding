@@ -1,0 +1,256 @@
+/* Customized fonts */
+
+@font-face {
+  font-family: "BallparkWeiner";
+  src: url("../fonts/ballpark.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Dayrom";
+  src: url("../fonts/dayrom.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Principals Elements of our page */
+
+body {
+  background: url("../images/fond_jaune.png");
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #2c2c2c;
+}
+
+main {
+  /*
+        With # block_page, the block that encompasses the whole page, 
+        I set the limits at 900 pixels wide. 
+        With automatic margins, the design will be centered.
+    */
+  max-width: 950px;
+  margin: auto;
+}
+
+section > h1,
+footer h1,
+header nav a {
+  font-family: Dayrom, serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+header {
+  background: url("../images/separateur.png") repeat-x bottom;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#logo > * {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+#logo img {
+  width: 59px;
+  height: 60px;
+}
+
+header h1 {
+  font-family: "BallparkWeiner", serif;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header h2 {
+  font-family: "Dayrom", serif;
+  font-size: 1.1em;
+  margin-top: 0px;
+}
+
+header nav ul > li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+header nav a {
+  font-size: 1.3em;
+  color: #181818;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #760001;
+  border-bottom: 3px solid #760001;
+}
+
+#hero {
+  margin-top: 15px;
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  background: url("../images/sunriseSeoul.jpg") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  box-shadow: 0px 4px 4px #1c1a19;
+  margin-bottom: 25px;
+}
+
+#heroDesc {
+  position: absolute;
+  bottom: 0;
+  border-radius: 0px 0px 5px 5px;
+  width: 99.5%;
+  height: 33px;
+  padding-top: 15px;
+  padding-left: 4px;
+  background-color: rgba(24, 24, 24, 0.8);
+  color: white;
+  font-size: 0.8em;
+}
+
+.red_button {
+  height: 25px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  background: url("../images/fond_degraderouge.png") repeat-x;
+  border: 1px solid #760001;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 3px 8px 0px 8px;
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+article,
+aside {
+  text-align: justify;
+}
+
+article {
+  margin-right: 20px;
+  width: 70%;
+}
+
+.ico {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+article p {
+  font-size: 0.8em;
+}
+
+aside {
+  width: 30%;
+  position: relative;
+  background-color: #706b64;
+  box-shadow: 0px 2px 5px #1c1a19;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-size: 0.9em;
+}
+aside p {
+  text-align: justify;
+}
+
+aside div,
+aside h1 {
+  text-align: center;
+}
+#greyArrow {
+  position: absolute;
+  top: 100px;
+  left: -12px;
+}
+
+#corgi img {
+  border: 1px solid #181818;
+  height: 150px;
+  width: 150px;
+}
+
+aside img {
+  margin-right: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: url("../images/ico_top.png") no-repeat top center,
+    url("../images/separateur.png") repeat-x top,
+    url("../images/ombre.png") repeat-x top;
+  padding-top: 25px;
+}
+
+footer p,
+footer ul {
+  font-size: 0.8em;
+}
+
+footer h1 {
+  font-size: 1.1em;
+}
+
+#pics img {
+  border: 1px solid #181818;
+  margin-right: 2px;
+}
+
+#friends {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+#friends ul {
+  list-style-image: url("../images/ico_liensexterne.png");
+  padding-left: 2px;
+  padding-right: 20px;
+}
+#friends ul li {
+  font-size: 2em;
+}
+
+#friends a {
+  text-decoration: none;
+  color: #760001;
+  font-size: .7em;
+}
+
+
+@media screen and (max-width: 854px){
+  #tweet{display:none;
+  }
+
+  aside > p > img{
+    width: 36px;
+    height: 36px;
+  }
+
+}
+
+@media screen and (max-width: 755px){
+  section{
+    flex-direction: column;
+  }
+  article{
+    width: 100%;
+    margin-right: 0;
+  }
+
+  aside{
+    width: 100%;
+  }
+}
