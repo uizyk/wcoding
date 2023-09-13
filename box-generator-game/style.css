@@ -1,0 +1,18 @@
+.card-container{
+    display:flex;
+    flex-wrap: wrap;
+}
+.default {
+    height: 100px;
+    width: 100px;
+    background-color: midnightblue;
+    color: midnightblue;
+    text-align: center;
+    font-size: 4.5em;
+    border: 2px solid lightblue;
+    user-select: none;
+}
+
+.show {
+    background-color: lightblue;
+}
