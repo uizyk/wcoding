@@ -1,0 +1,789 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;  
+    overflow: hidden;
+
+}
+
+.scroll-snap{
+    scroll-snap-align: start;
+}
+
+header{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(0deg, RGB(145, 215, 155)50%, RGB(255, 255, 255)50%, RGB(250, 250, 250)70%,RGB(176, 177, 176)85%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#header-bottom{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 50px;
+    
+}
+
+#container{
+    height:300%;
+    width: 100vw;
+    position:absolute;
+}
+
+h2{
+    font-size: 5em;
+    text-transform: uppercase;
+    color: black;
+}
+
+h3{
+    font-size: 2em;
+    text-transform: uppercase;
+   color: black;
+}
+
+p{
+    font-size: 1.2em;
+    color: rgba(0,0,0,0.5);
+}
+
+td{
+    color: rgba(0,0,0,0.5);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.floating-text, a, h1, h2, h3, p, table{
+    z-index: 5;
+}
+
+
+/* SECTIONS */
+
+#student-life, #community-service, #homeroom-system{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+
+
+
+#student-life{
+    background: linear-gradient(180deg, RGB(145, 215, 155), RGB(125, 195, 135)50%);
+}
+
+#student-life .h2-wave{
+    margin-top: 20px;
+}
+
+
+table{
+    border: 1px solid rgb(40,40,40);
+    border-collapse: collapse;
+    height: 300px;
+    width: 90vw;
+    text-align: center;
+}
+
+td{
+    border: 1px solid rgb(40,40,40);
+}
+
+/* TABLE DATA TRANSITION */
+
+
+
+/* COMMUNITY SERVICE (SECTION 2) */
+
+#community-service{
+    background: linear-gradient(180deg, RGB(125, 195, 135), RGB(75, 145, 85)60%);
+}
+
+
+/* HOMEROOM SYSTEM (SECTION3) */
+
+#homeroom-system{
+    background: linear-gradient(180deg, RGB(75, 145, 85), RGB(35, 105, 45)70%);
+    
+}
+
+/* SECTION NAV */
+
+.section-nav{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+
+
+/* TEXT FOR STUDENT LIFE, COMMUNITY SERVICE, AND HOMEROOM SYSTEM */
+
+    .cloud-div-left h1 a, .cloud-div-middle h1 a, .cloud-div-right h1 a{
+        position: absolute;
+        font-size: .8em;
+        /* text-align: center; */
+        text-transform: uppercase;
+        color: transparent;
+        z-index: 9;
+        -webkit-text-stroke: 1px rgba(0,0,0,0.2);
+    }
+
+    .cloud-div-left h1 a{
+        left: 80px;
+        top: -60px;
+    }
+
+    .cloud-div-middle h1 a{
+        left: 60px;
+        top: -60px;
+    }
+
+    .cloud-div-right h1 a{
+        left: 60px;
+        top: -60px;
+    }
+
+/* TEXT ANIMATION */
+
+.cloud-div-left h1 a::before, .cloud-div-middle h1 a::before, .cloud-div-right h1 a::before{
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.cloud-div-left h1 a:hover::before, .cloud-div-middle h1 a:hover::before, .cloud-div-right h1 a:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px white);
+}
+
+
+
+ /* =========================================================================== */
+ /* =================================ANIMATIONS================================ */
+ /* =========================================================================== */
+
+
+
+/* ================ */
+/* CLOUDS ANIMATION */
+/* ================ */
+
+.cloud-div-left, .cloud-div-middle, .cloud-div-right{
+    position: relative;
+    height: 400px;
+    margin-top: -135px;
+
+}
+
+/* left cloud */
+.cloud-div-left{
+    right:130px;
+}
+
+/* middle cloud */
+.cloud-div-middle{
+    left: 340px;
+}
+
+/* right cloud */
+
+.cloud-div-right{
+    left: 830px;
+}
+
+/* cloud animation */
+
+.cloud{
+    position: absolute;
+    top:-50px;
+    width: 320px;
+    height: 100px;
+    background: gray;
+    border-radius: 100px;
+    z-index: 8;
+   
+}
+
+
+.cloud::before{
+    content: '';
+    position: absolute;
+    top:-50px;
+    left:40px;
+    width: 110px;
+    height: 110px;
+    background: gray;
+    border-radius: 50%;
+    box-shadow: 90px 0 0 30px gray;
+
+}
+
+.rain{
+    position: absolute;
+    display: flex;
+    padding: 0 20px;
+
+}
+
+.rain span{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #085E7D;
+    margin: 0 2px;
+    border-radius: 50%;
+    animation: rain 5s linear infinite;
+    animation-duration: calc(15s / var(--i));
+    transform-origin:bottom;
+    z-index: 7;
+}
+
+@keyframes rain{
+    0%{
+        transform: translateY(0) scale(1);
+    }
+    70%{
+        transform: translateY(258px) scale(1);
+    }
+    100%{
+        transform: translateY(258px) scale(0);
+    }
+}
+
+/* ======================= */
+/* MOVING CLOUDS ANIMATION */
+/* ======================= */
+
+.banner{
+    position:absolute;
+    height: 50%;
+    width: 100%;
+}
+.moving-clouds{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    bottom: 243px;
+}
+
+
+.banner .moving-clouds img{
+    position: absolute;
+    max-width: 100%;;
+    animation: movingclouds calc(8s * var(--i)) linear infinite;
+}
+@keyframes movingclouds{
+    0%{
+        transform: translateX(-100%)
+    }
+    100%{
+        transform: translateX(100%)
+    }
+}
+
+/* ======================= */
+/* FLOATING TEXT ANIMATION */
+/* ======================= */
+
+.floating-text{
+    text-transform:uppercase;
+    font-size: 130px;
+    font-weight: 900;
+    letter-spacing: 130px;
+    color: #ffffff40;
+    transform: translateY(0);
+    animation: fl1 3s infinite linear;
+    margin-left: 100px;
+    z-index: 10;
+}
+
+.floating-text::before{
+    content: attr(data-text);
+    position: absolute;
+    color: black;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    animation: fl2 3s infinite linear;
+}
+
+@keyframes fl1{
+    30%{
+        transform: translateY(10%) rotate(4deg)
+    }
+    70%{
+        transform: translateY(10%) rotate(-4deg)
+    }
+}
+
+@keyframes fl2{
+    30%{
+        clip-path: polygon(0 0, 100% 0, 100% 24%, 0 57%);
+    }
+    70%{
+        clip-path: polygon(0 0, 100% 0, 100% 57%, 0 24%);   
+    }
+}
+
+/* =============== */
+/* SHARK ANIMATION */
+/* =============== */
+
+.shark-div{
+    height: 200px;
+    width: 350px;
+    margin-left: 335px;
+    margin-bottom: -50px;
+    /* position: absolute; */
+    transform: translate(-50%, -50%);
+    /* left: 930px;
+    top: 750px; */
+}
+
+.shark{
+    background-color: #085E7D;
+    height: 90px;
+    width: 140px;
+    border-radius: 0 80px 80px 0;
+    position: absolute;
+    bottom: 60px;
+    right: 50px;
+    animation: sleep 2s infinite;
+    transform: rotate(-10deg);
+}
+
+ .shark-body{
+    background-color: #085E7D;
+    height: 90px;
+    width: 230px;
+    position: absolute;
+    right: 65px;
+    bottom: 0;
+    border-radius: 100px 60px 0 0;
+    animation: sleep 2s infinite;
+    transform-origin: bottom right;
+ }
+
+ .fin {
+    height: 55px;
+    width: 50px;
+    background-color: #085E7D;
+    position: absolute;
+    bottom: 80px;
+    left: 2px;
+    border-radius: 10px 150px 35px 0;
+    transform: rotate(-2deg);
+ }
+
+ .eye-close{
+    top: 18px;
+    left: 80px;
+ }
+
+ .mouth{
+    background-color: #151d38;
+    height: 20px;
+    width: 35px;
+    position: absolute;
+    border-radius: 0 0 15px 15px;
+    top: 50px;
+    left: 100px;
+    animation: mouth-move 2s infinite;
+    transform-origin: top;
+ }
+
+ .nap-bubble{
+    height: 20px;
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    border-radius: 50px 50px 50px 5px;
+    left: 120px;
+    top: 20px;
+    animation: bubble-scale 2s infinite;
+ }
+
+ .tail{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 245px;
+    top: 30px;
+    background-color: #085E7D;
+    border-radius: 90%;
+    transform: rotate(-40deg);
+ }
+
+ .lower-tail{
+    top: 60px;
+    transform: rotate(-40deg);
+ }
+
+
+ .shark-body:before{
+    content: "";
+    position: absolute;
+    background-color: #085E7D;
+    height: 25px;
+    width: 40px;
+    border-radius: 0px 0px 360px 60px;
+    top: 88px;
+    left: 100px;
+    box-shadow: 45px -6px #085E7D;
+    transform: rotate(1deg);
+ }
+
+ .eye-close, .eye-close:before{
+    height: 12px;
+    width: 15px;
+    border: 2px solid black;
+    position: absolute;
+    border-radius: 0 0 15px 15px;
+    border-top: none;
+ }
+
+ @keyframes sleep{
+    50%{
+        transform: scale(0.9, 1.05);
+    }
+ }
+
+ @keyframes mouth-move{
+    50%{
+        transform: scaleY(0.2);
+    }
+ }
+
+ @keyframes bubble-scale{
+    50%{
+        transform: scale(1.6);
+    }
+ }
+
+/* ==================== */
+/* DOWN ARROW ANIMATION */
+/* ==================== */
+#bouncing-arrow-down{
+    /* position: absolute; */
+    background-size: 30px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid Meet' width='100' height='100'%3e%3cpath d='M100 5.5c0 1.3-.5 2.6-1.5 3.5L50 57.5 1.5 9c-2-2-2-5.1 0-7.1s5.1-2 7.1 0L50 43.4 91.5 1.9c2-2 5.1-2 7.1 0 .9 1 1.4 2.3 1.4 3.6z'/%3e%3c/svg%3e");
+    height: 30px;
+    width: 30px;
+    z-index: 3;
+    text-align: center;
+    animation: bounce-down 2s ease infinite;
+    /* left: 900px;
+    bottom: 50px; */
+    
+
+  }
+  
+  @keyframes bounce-down {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(5px);}
+      60% {transform: translateY(3px);}
+  }
+
+
+/* ================= */
+/* BUBBLES ANIMATION */
+/* ================= */
+
+.bubble-div{
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+    z-index: 1;
+}
+
+div .dot{
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.5);
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+
+div .b1{
+    top: 20%;
+    left: 20%;
+    animation: bubble 8s linear infinite;
+}
+
+div .b2{
+    top: 60%;
+    left: 80%;
+    animation: bubble 10s linear infinite;
+}
+
+div .b3{
+    top: 40%;
+    left: 40%;
+    animation: bubble 5s linear infinite;
+}
+
+div .b4{
+    top: 66%;
+    left: 30%;
+    animation: bubble 7s linear infinite;
+}
+
+div .b5{
+    top: 90%;
+    left: 10%;
+    animation: bubble 9s linear infinite;
+}
+
+div .b6{
+    top: 30%;
+    left: 60%;
+    animation: bubble 5s linear infinite;
+}
+
+div .b7{
+    top: 70%;
+    left: 20%;
+    animation: bubble 8s linear infinite;
+}
+
+div .b8{
+    top: 75%;
+    left: 60%;
+    animation: bubble 10s linear infinite;
+}
+
+div .b9{
+    top: 50%;
+    left: 50%;
+    animation: bubble 6s linear infinite;
+}
+
+div .b10{
+    top: 45%;
+    left: 20%;
+    animation: bubble 10s linear infinite;
+}
+
+div .b11{
+    top: 10%;
+    left: 90%;
+    animation: bubble 9s linear infinite;
+}
+
+div .b12{
+    top: 20%;
+    left: 70%;
+    animation: bubble 7s linear infinite;
+}
+
+div .b13{
+    top: 20%;
+    left: 20%;
+    animation: bubble 8s linear infinite;
+}
+
+div .b14{
+    top: 60%;
+    left: 5%;
+    animation: bubble 6s linear infinite;
+}
+
+div .b15{
+    top: 94%;
+    left: 82%;
+    animation: bubble 9s linear infinite;
+}
+
+div .b16{
+    top: 34%;
+    left: 78%;
+    animation: bubble 8s linear infinite;
+}
+
+div .b17{
+    top: 33%;
+    left: 48%;
+    animation: bubble 10s linear infinite;
+}
+
+div .b18{
+    top: 13%;
+    left: 9%;
+    animation: bubble 5s linear infinite;
+}
+
+div .b19{
+    top: 76%;
+    left: 38%;
+    animation: bubble 7s linear infinite;
+}
+
+div .b20{
+    top: 97%;
+    left: 17%;
+    animation: bubble 9s linear infinite;
+}
+
+@keyframes bubble{
+    0%{
+        transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100%{
+        transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+}
+
+
+/* H2 text wave */
+
+.h2-wave{
+    position:relative;
+    width: 100%;
+    left: 50%;
+
+}
+
+.h2-wave h2{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.h2-wave h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 0.5px black;
+    
+}
+
+.h2-wave h2:nth-child(2){
+    color: black;
+    animation: h2wave 4s ease-in-out infinite;
+}
+
+@keyframes h2wave{
+    0%, 100%
+    {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50%
+    {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+
+
+/* HOMEROOM IMAGES (section3) */
+
+.section3-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.section3-bottom div {
+    height: 200px;
+    width: 250px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    
+}
+
+.section3-bottom div p{
+    opacity: 0;
+    transform: scale(0);
+    font-size: 2rem;
+    transition: 0.8s;
+    color: white;
+}
+
+.section3-bottom div:hover p{
+opacity: 1;
+transform: scale(.72);
+}
+
+
+.section3-bottom div:nth-child(1){
+    background-image: url(security.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.section3-bottom div:nth-child(2){
+    background-image: url(cooperation.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.section3-bottom div:nth-child(3){
+    background-image: url(homeroom.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.section3-bottom div:nth-child(4){
+    background-image: url(communication.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.section3-bottom div:nth-child(5){
+    background-image: url(bonding.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.section3-bottom div:hover{
+    box-shadow: 0 0 0 300px RGBA(0, 0, 0, 0.9) inset;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+@media screen and (max-width: 390px){
+
+  header{
+    visibility: hidden;
+  }
+
+} */
