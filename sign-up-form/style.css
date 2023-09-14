@@ -1,0 +1,59 @@
+*{
+    font-size: 1.1em;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+span{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    visibility: hidden;
+    font-size: 0.8em;
+    color: red;
+
+}
+
+form{
+    text-align: center;
+    height: 1050px;
+    width: 900px;
+    background: linear-gradient(purple,dodgerblue, blue);
+    margin-left: 100px;
+    display:flex;
+    justify-content: center;
+    color: white;
+}
+
+fieldset{
+    width: 800px;
+    margin-right: 20px;
+ 
+}
+
+label{
+    text-transform: uppercase;
+}
+
+
+.red{
+    border: 1px solid red;
+    color: red;
+}
+
+.green{
+    border: 1px solid green;
+    color: green;
+}
+
+.show{
+    visibility: visible;
+}
+
+input:focus{
+    outline:none;
+}
+
+#submit{
+    filter: drop-shadow(0 0 15px white);
+}

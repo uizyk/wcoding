@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Forms exercise</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Sign-up form</legend>
+        
+            <label>Gender:</label><br/>
+            <label for="man"></label><input type="radio" name="gender" value="man" id="man">Man</label>
+            <label for="woman"></label><input type="radio" name="gender" value="woman" id="woman">Woman</label><br/>
+            <span>You need to select a gender</span>
+            <br/>
+            <label>Last Name:</label><br/>
+            <input type="text" class="lname"><br/>
+            <span>A last name cannot be less than 2 characters</span>
+            <br/>
+            <label>First Name:</label><br/>
+            <input type="text" class="fname"><br/>
+            <span>A first name cannot be less than 2 characters</span>
+            <br/>
+            <label>Age:</label><br/>
+            <input type="number" id="age"><br/>
+            <span>The age has to be between 5 and 140</span>
+            <br/>
+            <label>Login:</label><br/>
+            <input type="text" id="login"><br/>
+            <span>The login cannot be less than 4 characters</span>
+            <br/>
+            <label>Password:</label><br/>
+            <input type="password" id="password"><br/>
+            <span>The password cannot be less than 6 characters</span>
+            <br/>
+            <label>Password: (confirmation)</label><br/>
+            <input type="password" id="confirm-password"><br/>
+            <span>The password confirmation has to be the same as the original one</span>
+            <br/>
+            <label>Country:</label><br/>
+            <select name="country" id="country">
+                <option value="country-of-origin" selected disabled hidden id="country-of-origin">Where are you from?</option>
+                <option value="South-Korea">South Korea</option>
+                <option value="Canada">Canada</option>
+                <option value="US">US</option>
+            </select><br/>
+            <span>You have to select your residence country</span>
+            <br/>
+            <input type="checkbox">
+            <label>I want to receive a newsletter every month</label>
+            <br/>
+            <input type="submit" id="submit">
+            <input type="reset" id="reset">
+        </fieldset>
+
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
