@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    width: 310px;
+    flex-wrap: wrap;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: dodgerblue;
+    border: 1px solid black;
+    
+}
+
+h2 {
+    font-size: 100px;
+    color: dodgerblue;
+    font-weight: 900;
+    z-index: 22;
+}
+
+.highlight {
+    background-color: yellow;
+}
