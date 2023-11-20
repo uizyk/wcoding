@@ -1,4 +1,4 @@
-Projects completed at wcoding (Full-stack web development bootcamp)
+Projects completed at wcoding
 
 Topics covered:
 
